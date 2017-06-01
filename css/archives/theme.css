@@ -1,0 +1,351 @@
+/* ============ */
+/* Original CSS */
+/* ============ */
+
+
+
+.borderish input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required,
+.customcontact input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
+    border: solid 2px #cccccc;
+}
+.borderish textarea.wpcf7-form-control.wpcf7-textarea,
+.customcontact textarea.wpcf7-form-control.wpcf7-textarea {
+    border: solid 2px #cccccc;
+}
+.borderish select.wpcf7-form-control.wpcf7-select,
+.customcontact select.wpcf7-form-control.wpcf7-select {
+    border: solid 2px #cccccc;
+}
+.page-id-302 .l-section.wpb_row.height_medium.larger12 {
+    background-image: url('http://bwmsites.com/livhome2/wp-content/uploads/2016/09/checkers-photo-2.png');
+}
+#sliderp {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Collapse Header removed */
+
+/*.CollapseHeader-content {
+    color: #6f57a4;
+}*/
+
+.footersocial {
+    float: right;
+    margin-top: -20px;
+}
+.w-copyright {
+    width: 100%;
+    text-align: left;
+}
+.l-subfooter .w-nav.layout_hor {
+    display: none;
+}
+.larry33 .w-btn.style_solid.size_large.color_purple.icon_none {
+    width: 227.75px !important;
+}
+.l-section.wpb_row.height_medium.larger12 {
+    max-height: 728px;
+}
+#sl_leftcol {
+    width: 48%;
+    float: left;
+}
+#map {
+    width: 44%!important;
+    float: right;
+}
+#map_sidebar {
+    width: 50%;
+    float: left;
+}
+#address_search {
+    display: none;
+}
+div#slp_tagline {
+    display: none;
+}
+div#map_sidebar .results_entry,
+div#slpw_resultsbox .results_entry {
+    border-bottom: 2px solid #cccccc!important;
+    padding-bottom: 23px!important;
+}
+@media (max-width: 1250px) {
+    span.w-nav-title {
+        font-size: 15px!important;
+    }
+    .toprightheader {
+        font-size: 15px!important;
+    }
+}
+@media (max-width: 640px) {
+    .page-id-302 input.slp_widget_button,
+    .page-id-83 input.slp_widget_button {
+        top: 14px!important;
+        margin-left: auto!important;
+        margin-right: auto!important;
+        position: relative!important;
+        display: block!important;
+    }
+    .page-id-302 input#address_input_slpw_adv,
+    .page-id-83 input#address_input_slpw_adv {
+        max-width: 330px;
+        padding: 3%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        min-height: 80px;
+        float: none;
+        display: block;
+    }
+}
+@media (max-width: 500px) {
+    .l-main {
+        padding-top: 0px;
+    }
+    .page-id-302 .l-section.wpb_row.height_medium.larger12 {
+        background-image: url('http://bwmsites.com/livhome2/wp-content/uploads/2016/09/checkerscropped-2.png')!important;
+        background-position: -129px 0px !important;
+        padding-top: 50px!important;
+    }
+    .footersocial {
+        float: right;
+        margin-top: 10px;
+    }
+}
+@media (max-width: 904px) {
+    .hanna73 {
+        margin-top: -80px;
+    }
+    .l-section.wpb_row.height_medium.larger12 {
+        max-height: 850px;
+    }
+}
+@media (max-width: 767px) {
+    #map_sidebar {
+        margin-top: 40px;
+    }
+    div#map_sidebar .results_row_right_column,
+    div#slpw_resultsbox .results_row_right_column {
+        text-align: center!important;
+        width: 22%!important;
+    }
+    .hanna73 {
+        margin-top: -80px;
+    }
+    .page-id-302 .l-section-h {
+        padding: 15px 0!important;
+    }
+    .page-id-302 .g-cols > div {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0px!important;
+    }
+    .larry33 .w-btn-wrapper.align_right,
+    .larry33 .w-btn-wrapper.align_left {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+        width: 230px;
+        display: block;
+    }
+    #map {
+        width: 100%!important;
+        float: right;
+    }
+    #map_sidebar {
+        width: 100%;
+        float: left;
+    }
+    .home .quads img,
+    .quads img {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.home .quads img {
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    padding-top: 20px;
+}
+.quads .wpb_text_column {
+    padding-bottom: 1px;
+    float: left;
+}
+.quads img {
+    width: 85px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.quads h3 a {
+    font-weight: 400;
+    color: rgb(111, 87, 165) !important;
+    font-family: gothammedium!important;
+}
+.quads h3 {
+    color: rgb(111, 87, 165) !important;
+    font-family: gothammedium!important;
+}
+.larger12 {
+    text-shadow: 1px 1px 1px black;
+}
+.l-footer a {
+    color: rgb(65, 64, 66) !important;
+}
+#sl_rightcol {
+    width: 48%;
+    float: right;
+}
+#tagalong_list {
+    display: none;
+}
+.lined {
+    margin-top: 40px!important;
+    margin-bottom: 0px!important;
+}
+.w-progbar.style_5.size_large .w-progbar-bar {
+    height: 50px;
+    border-radius: 5px;
+}
+.quads h3 {
+    color: rgb(111, 87, 165) !important;
+}
+.locations12 .wpb_text_column {
+    min-height: 200px;
+    line-height: 25px;
+    padding-bottom: 0px!important;
+}
+.toprightheader {
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    padding: 11px 28px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+    padding-top: 10px;
+}
+.page-id-302 .widget_slp_widget_search .widgettitle,
+.page-id-83 .widget_slp_widget_search .widgettitle {
+    display: none;
+}
+.page-id-302 div#slp_widget_search-2,
+.page-id-83 div#slp_widget_search-2 {
+    max-width: 565px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-id-302 input#address_input_slpw_adv,
+.page-id-83 input#address_input_slpw_adv {
+    max-width: 330px;
+    padding: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    min-height: 80px;
+}
+.page-id-302 input.slp_widget_button,
+.page-id-83 input.slp_widget_button {
+    padding: 30px 60px;
+    margin-top: 0px;
+    margin-left: 5%;
+}
+.customcontact input.wpcf7-form-control.wpcf7-text {
+    min-height: 75px;
+}
+.customcontact input.wpcf7-form-control.wpcf7-submit {
+    width: 100%;
+    border-radius: 0px;
+    padding: 7%;
+    background-color: #6f57a4!important;
+}
+.one-third.customcontact {
+    background-color: #eeeeee;
+    padding: 2%;
+}
+div#charts1 {
+    padding: 1.5% 0%;
+    border: 1px solid black;
+    border-top: 0px;
+    padding-left: 5px;
+}
+.charts .one-half {
+    width: 48%!important;
+}
+.charts .one-quarter {
+    width: 22%!important;
+}
+.larger12 {
+    top: 100px;
+    background-position: center center!important;
+}
+.l-section-h {
+    padding: 40px 0!important;
+}
+.l-section-h.i-cf {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.w-separator.size_medium {
+    margin: 30px 0;
+}
+.page-id-5584 .l-titlebar-h {
+    height: 150px;
+}
+.page-id-5588 .l-titlebar-h {
+    height: 150px;
+}
+.page-id-5743 .w-contacts-item.for_address::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+.page-id-5743 .w-contacts-item.for_phone::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+.page-id-6271 .w-contacts-item.for_address::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+.page-id-6271 .w-contacts-item.for_phone::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+.page-id-6272 .w-contacts-item.for_address::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+.page-id-6272 .w-contacts-item.for_phone::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+.page-id-6273 .w-contacts-item.for_address::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+.page-id-6273 .w-contacts-item.for_phone::before {
+    color: #6f57a4;
+    box-shadow: 0 0 0 2px #6f57a4 inset;
+}
+@media (max-width: 600px) {
+    .moveupmobile {
+        margin-top: 25%;
+    }
+}
+}

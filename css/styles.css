@@ -1,0 +1,478 @@
+/*
+
+   REFERENCE
+  ============
+
+  Purple: #6f57a4   ||   rgb(111,87,164)
+
+  Gray: #f6f5f5   ||   rgb(246, 245, 245)
+
+  Black: #404041   ||   rgb(64, 64, 65)
+
+*/
+
+
+
+/* ======================= */
+/* ===== BASE STYLES ===== */
+/* ======================= */
+
+/* Delete this if you resolve the font load blocking issue */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+/* Establish base font and weight */
+h1, h2, h3, h4, h5, h6
+p, blockquote, small, form
+label, select, option, input {
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 400;
+}
+
+/* Font display optimization */
+body{
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    font-smooth: always;
+
+    font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
+   }
+
+
+
+/* =============================== */
+/* ===== REUSABLE COMPONENTS ===== */
+/* =============================== */
+
+/* === Utility Classes === */
+/*
+
+  .lh-full-width
+    makes any component the full width of its container
+
+  .lh-centered
+    centers the text within any container
+
+  .h2-padder
+    meant to give horizontal padding to full width section headers or text blocks
+
+  .side-menu-item
+    creates a highlightable side menu
+
+  .cta-primary
+    filled purple button, primary call to action
+
+  .cta-secondary
+    hollow button with animated underline
+
+
+*/
+
+/* Full Width Components */
+.lh-full-width {
+  width: 100%;
+}
+
+/* Centered Text */
+.lh-centered {
+  text-align: center;
+}
+
+/* h2-padding */
+.text-padder {
+  padding: 0 120px;
+}
+@media screen and (max-width: 567px) {
+  .text-padder {
+    padding: 0 20px;
+  }
+}
+
+/* === Side Menu === */
+
+.side-menu-item a {
+  margin: 0 !important;
+  padding: 1rem;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #404041;
+  border-bottom: 1px solid #E0E0E0;
+  background-color: #EEEEEE;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.side-menu-item a:hover {
+  background-color: #6f57a4;
+  color: #FFF;
+}
+
+/* === Call to Action Buttons === */
+
+/* Both Buttons */
+.cta-primary,
+.cta-secondary {
+  overflow:visible;
+  font-size: 20px;
+  font-weight: 300 !important;
+  line-height: 36px !important;
+}
+
+/* Primary Button */
+.cta-primary {
+  margin-bottom: 0 !important;
+  border: 2px solid rgba(111,87,164, 1); /* == #6f57a4 */
+  background-color: rgba(111,87,164, 1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+}
+.cta-primary:hover {
+  border: 2px solid rgba(111,87,164, 0.85) !important;
+  background-color: rgba(111,87,164, 0.85) !important;
+}
+/* Secondary Buttons */
+.cta-secondary {
+  color:  #6f57a4;
+  background-color: rgba(0,0,0,0) !important;
+  border-radius: 0 !important;
+}
+.cta-secondary::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #6f57a4;
+  visibility: hidden;
+  /* Animated Underline */
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+}
+.cta-secondary:hover {
+  color: #6f57a4 !important;
+}
+.cta-secondary:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* === Lookng for Something === */
+.looking-for-something {
+  padding: 100px 0;
+}
+/* font color */
+.looking-text-box,
+.looking-text-box h2,
+.looking-form p {
+  color: #FFFFFF !important;
+}
+.looking-text-box {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.looking-form {
+  text-align: center;
+}
+.looking-form .cta-primary,
+.looking-form select {
+  height: 60px;
+  margin: 0;
+}
+
+/* EVERYTHING BUT PHONES & TABLETS */
+@media screen and (min-width: 800px) {
+  .looking-form .cta-primary {
+    margin-left: 15px;
+  }
+}
+
+/* EVERYTHING BUT PHONES */
+@media screen and (min-width: 567px) {
+  .looking-select {
+    width: 30% !important;
+  }
+}
+
+/* PHONES ONLY */
+@media screen and (max-width: 567px) {
+  .looking-form .looking-select {
+    margin-bottom: 10px;
+  }
+  .looking-form .cta-primary {
+    width: 100%;
+  }
+}
+
+
+
+/* ================== */
+/* ===== HEADER ===== */
+/* ================== */
+
+/* Home Page Header Adjustment */
+
+.home h2 {
+  font-size: 32px !important;
+  font-weight: 300 !important;
+}
+
+/* Slightly smoother header transitions */
+.l-header {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+/* Format contact link into a button */
+.w-nav-list > li.menu-item.level_1:last-child a.w-nav-anchor {
+  background-color: inherit;
+  color: #6f57a4 !important;
+  border: 2px solid #6f57a4;
+}
+.w-nav-list > li.menu-item.level_1:last-child a.w-nav-anchor:hover {
+  background-color: #6f57a4;
+  color: #FFFFFF !important;
+  border: 2px solid #6f57a4;
+}
+
+/* Styles for nested nav links */
+.w-nav-list li.level_2:hover,
+.w-nav-list li.level_3 {
+  background-color: #EEEEEE;
+}
+.w-nav-list li.level_3:hover {
+  background-color: #E0E0E0;
+}
+
+/* Space in between buttons */
+.rev-primary .cta-secondary {
+  margin-left: 10px;
+}
+
+/* Remove CollapseHeader */
+.home .CollapseHeader {
+  display: none !important;
+}
+
+/* DESKTOP ONLY */
+@media screen and (min-width: 992px) {
+  /* Add more space around the contact button */
+  .w-nav-list > li.menu-item.level_1:last-child a.w-nav-anchor {
+    margin-left: 15px;
+  }
+}
+
+
+
+/* ===================== */
+/* ===== HOME PAGE ===== */
+/* ===================== */
+
+/* Full width image - icon box styles */
+.full-width-image .custom-iconbox {
+  text-align: center;
+  padding: 9%;
+  min-height: 375px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.full-width-image .custom-iconbox:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.full-width-image .custom-iconbox p {
+  margin-bottom: 5px;
+}
+.full-width-image .custom-iconbox i {
+  font-size: 2rem;
+  color: #6f57a4;
+}
+.full-width-image .custom-iconbox .cta-secondary {
+  margin-left: 0!important;
+}
+
+/* 10 Common Concerns secton */
+.common-problems {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .common-problems .cta-primary {
+    white-space: normal;
+  }
+}
+
+/* Care boxes (3 x 3 grid) */
+.care-box blockquote {
+  padding: 10px;
+  border: none;
+}
+.care-box h3 {
+  color: #6f57a4 !important;
+  font-size: 1rem;
+}
+
+/* Speclaized Plan */
+.home-page-top-section .cta-primary {
+  margin-left: 55px;
+}
+@media (max-width: 576px) {
+  .home-page-top-section .cta-primary {
+    margin-left: 0;
+    width: 100%;
+    white-space: normal;
+  }
+}
+
+/* Testimonial Slider */
+.testimonial-slide {
+  color:  #404041 !important;
+  text-align: center;
+}
+/* Quote giver's name */
+.testimonial-slide small {
+  font-size: 1rem;
+}
+/* Quote text */
+.testimonial-slide blockquote {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+  padding-left: 0 !important;
+  border: 0 !important;
+}
+
+
+
+/* ======================================= */
+/* ===== HOME PAGE REVOLUTION SLIDER ===== */
+/* ======================================= */
+
+/* Remove section padding from slider container (home page only) */
+.home .l-section-h:first-child {
+  padding: 0 !important;
+}
+
+/* Headers */
+.rev-primary h1 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Paragraph text */
+.rev-primary p,
+.rev-connect p,
+.rev-primary h1 {
+  color: #000 !important;
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  line-height: 32px !important;
+}
+
+/* === Mobile Slide Styles === */
+/*
+Mobile slides are recreated below the slider using jquery.
+Check the html/js injection point in impreza theme options,
+heading: Revolution Mobile Config
+*/
+
+.rev-mobile-slide {
+  background-color: #f6f5f5;
+  padding: 10px 10px 30px 10px;
+  text-align: center;
+}
+
+/*  PHONES ONLY */
+@media screen and (max-width: 567px) {
+  .rev-primary-mobile h1 {
+    display: none;
+  }
+  .rev-connect-mobile p {
+    padding: 0 20px;
+  }
+}
+
+/* PHONES AND TABLETS */
+@media screen and (max-width: 769px) {
+  /* Hide the normal slide ctas */
+  .rev-primary,
+  .rev-connect {
+    visibility: hidden;
+  }
+}
+
+/* TABLETS ONLY */
+@media screen and (min-width: 650px) {
+  /* bring the mobile slide text into the center */
+  .rev-mobile-slide p {
+    padding: 0 40px;
+  }
+}
+
+
+
+/* =========================== */
+/* ===== CONTACT US PAGE ===== */
+/* =========================== */
+
+/* Form Fields */
+li.livhome-contact {
+  padding-right: 0 !important;
+}
+.livhome-contact-phone input,
+.livhome-contact-zip input,
+.livhome-contact-hear select {
+  width: 100% !important;
+}
+.livhome-contact input,
+.livhome-contact select {
+  border: 1px solid #000;
+}
+/* submit button */
+.livhome-contact-form .gform_button {
+  width: 100% !important;
+  font-size: 2rem;
+  line-height: 3rem;
+  border: 2px solid rgba(111,87,164, 1); /* == #6f57a4 */
+  background-color: rgba(111,87,164, 1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
+}
+.livhome-contact-form .gform_buttom:hover {
+  border: 2px solid rgba(111,87,164, 0.85) !important;
+  background-color: rgba(111,87,164, 0.85) !important;
+}
+
+
+
+/* ================== */
+/* ===== FOOTER ===== */
+/* ================== */
+
+/* Remove duplicate social links */
+/* FIXME Delete this code if you find the theme option for this */
+.footersocial {
+  display: none;
+}
