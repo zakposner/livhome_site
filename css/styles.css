@@ -55,6 +55,15 @@ body{
   .lh-centered
     centers the text within any container
 
+  .lh-white
+    makes text white
+
+  .lh-bg-white
+    makes background white
+
+  .lh-iconbox
+    Apply styles to builder icon box
+
   .h2-padder
     meant to give horizontal padding to full width section headers or text blocks
 
@@ -80,9 +89,25 @@ body{
   text-align: center;
 }
 
+/* White Text */
+.lh-white {
+  color: #FFF !important;
+}
+
+/* White Background */
+.lh-bg-white {
+  background-color: #FFF !important;
+}
+
+/* Apply styles to builder icon box */
+.lh-iconbox {
+  background-color: #FFF !important;
+  padding
+}
+
 /* h2-padding */
 .text-padder {
-  padding: 0 120px;
+  padding: 0 200px;
 }
 @media screen and (max-width: 567px) {
   .text-padder {
@@ -221,6 +246,38 @@ body{
 
 
 
+/* ================================= */
+/* ===== CAREGIVER APPLICATION ===== */
+/* ================================= */
+
+.caregiver-application .sign-up,
+.caregiver-application .close-app {
+  display: inline-block;
+  vertical-align: top;
+}
+.caregiver-application .sign-up {
+  width: 80%
+}
+.caregiver-application .cta-primary {
+    width: 100%;
+    font-size: 14px;
+    border-radius: 0;
+    margin-top: 0;
+}
+.caregiver-application .close-app {
+  height: 62px;
+  width: 20%;
+  text-align: center;
+  color: #FFF;
+  padding: 14px 5px 11px 5px;
+  background-color: rgba(111,87,164, 0.8);
+}
+.caregiver-application i {
+  font-size: 2rem;
+}
+
+
+
 /* ================== */
 /* ===== HEADER ===== */
 /* ================== */
@@ -286,9 +343,9 @@ body{
 /* ===================== */
 
 /* Full width image - icon box styles */
-.full-width-image .custom-iconbox {
+.custom-iconbox {
   text-align: center;
-  padding: 9%;
+  padding: 15% 9% 9% 9%;
   min-height: 375px;
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -298,17 +355,17 @@ body{
   -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
-.full-width-image .custom-iconbox:hover {
+.custom-iconbox:hover {
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
-.full-width-image .custom-iconbox p {
+.custom-iconbox p {
   margin-bottom: 5px;
 }
-.full-width-image .custom-iconbox i {
+.custom-iconbox i {
   font-size: 2rem;
   color: #6f57a4;
 }
-.full-width-image .custom-iconbox .cta-secondary {
+.custom-iconbox .cta-secondary {
   margin-left: 0!important;
 }
 
@@ -316,30 +373,9 @@ body{
 .common-problems {
   text-align: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+  /* Let button take up 2 rows if needed on mobile */
   .common-problems .cta-primary {
-    white-space: normal;
-  }
-}
-
-/* Care boxes (3 x 3 grid) */
-.care-box blockquote {
-  padding: 10px;
-  border: none;
-}
-.care-box h3 {
-  color: #6f57a4 !important;
-  font-size: 1rem;
-}
-
-/* Speclaized Plan */
-.home-page-top-section .cta-primary {
-  margin-left: 55px;
-}
-@media (max-width: 576px) {
-  .home-page-top-section .cta-primary {
-    margin-left: 0;
-    width: 100%;
     white-space: normal;
   }
 }
@@ -398,17 +434,24 @@ heading: Revolution Mobile Config
 
 .rev-mobile-slide {
   background-color: #f6f5f5;
-  padding: 10px 10px 30px 10px;
+  padding: 35px 10px 35px 10px;
   text-align: center;
 }
 
 /*  PHONES ONLY */
 @media screen and (max-width: 567px) {
+  /* Hide the h1 */
   .rev-primary-mobile h1 {
     display: none;
   }
+  /* pad the content */
   .rev-connect-mobile p {
     padding: 0 20px;
+  }
+  /* stack & center the cta's */
+  .rev-primary-mobile .button-box button {
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -418,6 +461,10 @@ heading: Revolution Mobile Config
   .rev-primary,
   .rev-connect {
     visibility: hidden;
+  }
+  .rev-primary h2,
+  .rev-connect h2 {
+    padding-bottom: 15px;
   }
 }
 
@@ -439,15 +486,19 @@ heading: Revolution Mobile Config
 li.livhome-contact {
   padding-right: 0 !important;
 }
+/* consistent form field lengths */
 .livhome-contact-phone input,
 .livhome-contact-zip input,
 .livhome-contact-hear select {
   width: 100% !important;
 }
+
+/* input field styling */
 .livhome-contact input,
 .livhome-contact select {
   border: 1px solid #000;
 }
+
 /* submit button */
 .livhome-contact-form .gform_button {
   width: 100% !important;
