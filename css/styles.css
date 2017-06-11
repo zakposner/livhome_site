@@ -1,5 +1,4 @@
 /*
-
    REFERENCE
   ============
 
@@ -17,29 +16,55 @@
 /* ===== BASE STYLES ===== */
 /* ======================= */
 
-/* Delete this if you resolve the font load blocking issue */
+/* Delete this import statement if you resolve the font load blocking issue */
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 
 /* Establish base font and weight */
-h1, h2, h3, h4, h5, h6
+h1, h3, h4, h5, h6
 p, blockquote, small, form
 label, select, option, input {
   font-family: 'Roboto', sans-serif !important;
   font-weight: 400;
 }
+h2 {
+  font-weight: 300 !important;
+}
 
 /* Font display optimization */
-body{
-    text-rendering: optimizeLegibility;
-    text-rendering: geometricPrecision;
-    font-smooth: always;
+body {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
 
-    font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-    -webkit-font-smoothing: subpixel-antialiased;
-   }
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
 
+/* Standardize Forms */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+
+input,
+select,
+textarea {
+  box-shadow: none !important;
+  border: 1px solid #E0E0E0 !important;
+  border-radius: 0 !important;
+}
+input:focus,
+select:focus {
+  border: 1px solid #6f57a4 !important;
+}
+input[type="text"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-rtl-ordering: logical;
+}
+input:focus {
+  background-color: rgba(111,87,164, 0.2);
+}
 
 
 /* =============================== */
@@ -107,13 +132,14 @@ body{
 
 /* h2-padding */
 .text-padder {
-  padding: 0 200px;
+  padding: 0 120px;
 }
 @media screen and (max-width: 567px) {
   .text-padder {
     padding: 0 20px;
   }
 }
+
 
 /* === Side Menu === */
 
@@ -135,6 +161,7 @@ body{
   background-color: #6f57a4;
   color: #FFF;
 }
+
 
 /* === Call to Action Buttons === */
 
@@ -160,6 +187,13 @@ body{
 .cta-primary:hover {
   border: 2px solid rgba(111,87,164, 0.85) !important;
   background-color: rgba(111,87,164, 0.85) !important;
+}
+
+/* "cta-primary button should span full width on mobile" */
+@media screen and (max-width: 800px) {
+  .cta-primary {
+    width: 100% !important;
+  }
 }
 /* Secondary Buttons */
 .cta-secondary {
@@ -197,7 +231,30 @@ body{
   transform: scaleX(1);
 }
 
-/* === Lookng for Something === */
+
+/* === lh-cta-box === */
+
+/* TABLETS & UP */
+@media screen and (min-width: 800px) {
+  .lh-cta-box .cta-secondary {
+    margin-left: 10px;
+  }
+}
+
+/* PHONES & SMALL TABS */
+@media screen and (max-width:667px) {
+  .lh-cta-box .cta-primary,
+  .lh-cta-box .cta-secondary {
+    width: 100%;
+  }
+  .lh-cta-box .cta-primary {
+    margin-bottom: 20px !important;
+  }
+}
+
+
+
+/* === Looking for Something === */
 .looking-for-something {
   padding: 100px 0;
 }
@@ -244,6 +301,44 @@ body{
   }
 }
 
+/* === Half Width Bumpers === */
+
+.bumper-section .one-half {
+  padding: 0 !important;
+}
+
+.half-width-bumper {
+  text-align: center;
+  padding: 100px 0;
+  background-color: rgba(111, 87, 164, 1);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.half-width-bumper:hover {
+  background-color: rgba(111, 87, 164, 0.8);
+}
+
+/* give the second bumper a top border when stacked */
+@media screen and (max-width: 800px) {
+  .one-half:last-child .half-width-bumper {
+    border-top: 3px solid #FFF;
+  }
+}
+@media screen and (min-width: 800px) {
+  /* and a left border when side by side */
+  .one-half:last-child .half-width-bumper {
+    border-left: 3px solid #FFF;
+  }
+}
+
+.half-width-bumper p {
+  display: inline-block;
+  padding: 25px;
+  border: 3px solid #FFF;
+}
+
 
 
 /* ================================= */
@@ -281,6 +376,12 @@ body{
 /* ================== */
 /* ===== HEADER ===== */
 /* ================== */
+
+/* Remove Header Box Shadow */
+.l-header.layout_standard .l-subheader.at_middle,
+.l-header.layout_extended .l-subheader.at_middle {
+  box-shadow: none !important;
+}
 
 /* Home Page Header Adjustment */
 
@@ -466,6 +567,11 @@ heading: Revolution Mobile Config
   .rev-connect h2 {
     padding-bottom: 15px;
   }
+  .rev-primary-mobile .cta-primary,
+  .rev-secondary-mobile .cta-primary {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 /* TABLETS ONLY */
@@ -476,46 +582,196 @@ heading: Revolution Mobile Config
   }
 }
 
+/* DESKTOP ONLY */
+@media screen and (min-width: 967px) {
+}
+
+/* ====================== */
+/* ===== APPLY PAGE ===== */
+/* ====================== */
+
+@media screen and (min-width: 967px) {
+  .apply-online-container .list-radio-wrap .nf-field-element li,
+  .apply-online-container .list-checkbox-wrap .nf-field-element li {
+    display: inline-block;
+    padding-left: 10px !important;
+  }
+}
+
+.apply-online-submit {
+  padding: 20px 0 !important;
+}
+
+
+/* ======================== */
+/* ===== CAREERS PAGE ===== */
+/* ======================== */
+
+/* === Icons === */
+.custom-icons-section .w-iconbox-title {
+  padding: 10px 0 10px !important;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-icons-section .w-iconbox-title {
+    padding: 0 0 10px !important;
+  }
+}
+
+/* === Testimonial Slider === */
+.caregiver-testimonial blockquote {
+  border: none !important;
+  font-size: 1.25rem !important;
+  line-height: 1.25rem !important;
+  white-space: normal !important;
+}
+.caregiver-testimonial small {
+  font-size: 1rem !important;
+}
+
+@media screen and (min-width: 800px) {
+  .caregiver-testimonial small {
+    float: right;
+  }
+}
+@media screen and (max-width: 800px) {
+  .caregiver-testimonial small {
+    margin-left: 30%;
+  }
+}
 
 
 /* =========================== */
 /* ===== CONTACT US PAGE ===== */
 /* =========================== */
 
+/* === form === */
+
+/* set form field heights */
+#nf-form-2-cont input[type="text"],
+#nf-form-2-cont input[type="email"],
+#nf-form-2-cont input[type="tel"],
+#nf-form-2-cont select {
+  height: 60px !important;
+}
+
+/* override some default ninja button styles */
+.nf-form-cont .cta-primary {
+  border: none !important;
+  width: 100% !important;
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+
+/* Hide default ninja form message */
+.nf-form-fields-required {
+  display: none;
+}
+
+/* mailchimp checkboxx */
+.nf-form-cont .mailchimp-optin-wrap .nf-field-label {
+  width: 85%;
+}
+.nf-form-cont .mailchimp-optin-wrap .nf-field-element {
+  width: 5%;
+}
+
+/* 2 form fields per row, except comments and subscribe */
+@media screen and (min-width: 967px) {
+  .firstname-container,
+  .lastname-container,
+  #nf-form-2-cont .listselect-container,
+  #nf-form-2-cont .phone-container,
+  #nf-form-2-cont .email-container {
+    width: 49.5% !important;
+    display: inline-block !important;
+  }
+}
+
+/* Hide form error messages, they mess with the form style we want */
+.nf-error-msg {
+  position: absolute;
+}
+
+
+/* ========================== */
+/* ===== LOCATIONS PAGE ===== */
+/* ========================== */
+
 /* Form Fields */
-li.livhome-contact {
-  padding-right: 0 !important;
-}
-/* consistent form field lengths */
-.livhome-contact-phone input,
-.livhome-contact-zip input,
-.livhome-contact-hear select {
-  width: 100% !important;
+#addy_in_address,
+#addy_in_radius {
+  margin-bottom: 15px;
 }
 
-/* input field styling */
-.livhome-contact input,
-.livhome-contact select {
-  border: 1px solid #000;
+/* Submit Button */
+#addressSubmit {
+  width: 100%;
+  padding: 25px 0;
+  background-color: #6f57a4;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1) !important;
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1) !important;
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1) !important;
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1) !important;
 }
-
-/* submit button */
-.livhome-contact-form .gform_button {
-  width: 100% !important;
-  font-size: 2rem;
-  line-height: 3rem;
-  border: 2px solid rgba(111,87,164, 1); /* == #6f57a4 */
-  background-color: rgba(111,87,164, 1);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
-  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
-  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
-  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1)!important;
-}
-.livhome-contact-form .gform_buttom:hover {
-  border: 2px solid rgba(111,87,164, 0.85) !important;
+#addressSubmit:hover {
   background-color: rgba(111,87,164, 0.85) !important;
 }
 
+/* Text below button */
+#map_sidebar .text_below_map {
+  display: none;
+}
+
+#slp_tagline {
+  visibility: hidden;
+}
+
+/* DESKTOP ONLY - Page Layout */
+@media screen and (min-width: 967px) {
+  /* Push the form to the left and bring the map up */
+  #sl_div #searchForm {
+    width: 35%;
+    margin-right: 5%;
+    float: left;
+    /*padding-top: 10%;*/
+  }
+  #sl_div #map {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 967px) {
+  #addressSubmit {
+    margin-bottom: 15px;
+  }
+  .store-locator-section {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+/* === Map Results ===*/
+#map_sidebar .results_entry {
+  background: #EEEEEE;
+  border-bottom: 1px solid #E0E0E0 !important;
+}
+#map_sidebar .results_entry:hover {
+  background: rgba(111,87,164, 0.2) !important;
+}
+
+#map_sidebar span.location_name {
+  color: #6f57a4 !important;
+}
+
+
+/* ================================= */
+/* ===== LOCATIONS: CITY PAGES ===== */
+/* ================================= */
+
+.ult-team-member-position {
+  font-size: 1.125rem !important;
+}
 
 
 /* ================== */
@@ -526,4 +782,66 @@ li.livhome-contact {
 /* FIXME Delete this code if you find the theme option for this */
 .footersocial {
   display: none;
+}
+
+/* Column Widths */
+@media screen and (min-width: 727px) {
+  .l-subfooter.at_top .g-cols .one-quarter:first-child {
+    margin-bottom: 0 !important;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 967px) {
+  .l-subfooter.at_top .g-cols .one-quarter:first-child {
+    margin-bottom: 0 !important;
+    width: 73%;
+  }
+}
+
+/* Social Media Links */
+.w-socials-list {
+  padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .w-socials-list {
+    text-align: center
+  }
+}
+
+/* Hide the bottom subfooter */
+.l-subfooter.at_bottom {
+  display: none;
+}
+
+/* Copyright Text */
+.copyright-text {
+  text-align: center;
+}
+
+/* Style nav links */
+.footer-nav-group a {
+  display: block;
+  text-align: center;
+  color: #6f57a4;
+  padding: 15px 0;
+}
+@media screen and (min-width: 800px) {
+  .footer-nav-group {
+    margin-bottom: 25px;
+  }
+  .footer-nav-group a {
+    font-size: 22px;
+    display: inline-block;
+    width: 14%;
+    margin-right: 1.2%;
+  }
+  /* To compensate for privacy policy being longer */
+  .footer-nav-group a:last-child {
+    width: 18%;
+  }
+  .copyright-text {
+    text-align: left;
+    padding-left: 25px;
+  }
 }
